@@ -10,6 +10,10 @@ public class ClassLogic {
   public static Map<Character, Integer> returnMapWithCountAllCharacters(String s) {
     Map<Character, Integer> map = new HashMap<>();
 
+    if (s.isEmpty()) {
+      return map;
+    }
+
     for (Character c : s.toLowerCase().toCharArray()) {
       map.put(c, map.containsKey(c) ? (map.get(c) + 1) : 1);
     }
