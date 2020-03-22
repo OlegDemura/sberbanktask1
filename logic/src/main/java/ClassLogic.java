@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -21,13 +20,13 @@ public class ClassLogic {
   }
 
   public static String returnStringWithRemovedCharacters(String s) {
-    Map<Character, Integer> map = returnMapWithCountAllCharacters(s);
-
     if (s.isEmpty()) {
       return null;
     }
 
-    long max = map.values().stream().max(Comparator.naturalOrder()).get();
+    Map<Character, Integer> map = returnMapWithCountAllCharacters(s);
+
+    int max = map.values().stream().max(Comparator.naturalOrder()).get();
 
     List<Character> characters = map.entrySet().stream()
         .filter(v -> v.getValue() == max).map(Map.Entry::getKey)
