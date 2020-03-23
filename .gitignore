@@ -1,7 +1,4 @@
 .idea
 out
-/point/target/
-/logic/target/
-/input-output/target/
 target
 *.iml
