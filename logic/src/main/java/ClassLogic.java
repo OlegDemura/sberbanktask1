@@ -36,7 +36,8 @@ public class ClassLogic {
       return s;
     }
 
-    return s.replace(String.valueOf(characters.get(0)), "");
+    return s.replace(String.valueOf(characters.get(0)).toUpperCase(), "")
+        .replace(String.valueOf(characters.get(0)), "");
   }
 
 }
